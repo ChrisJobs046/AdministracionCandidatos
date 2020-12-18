@@ -1,0 +1,5 @@
+WebClient wc =  WebClient();
+           string datos = "matricula=20185858&clave=9987&contenido="+can.Cedula+"-"+can.Nombre+"-"+can.Apellido+"-"+can.Fecha_de_Nacimiento+"-"+can.Tipo_de_sangre+"-"
+           +can.Partido+"-"+can.Size_del_traje+"-"+can.Telefono+"-"+can.Celular+"-"+can.Email+"-"+can.Direccion+"-"+can.Persona_de_contacto+"-"+can.Telefono_de_contacto;
+           wc.Headers[HttpRequestHeader.ContentType] = "application/x-www-form-urlencoded";
+           wc.UploadString("http://www.adamix.net/api/itla/registrarDato", datos);
